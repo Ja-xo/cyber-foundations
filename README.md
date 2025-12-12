@@ -2,6 +2,9 @@
 
 This repository documents my hands-on journey from zero to cybersecurity foundations.
 
+## Why this repo exists
+I am building real, practical cybersecurity competence through daily study, labs, and documentation.
+
 ## Current Focus
 - Google Cybersecurity Professional Certificate
 - Advent of Cyber 2025 (TryHackMe)
@@ -12,5 +15,11 @@ This repository documents my hands-on journey from zero to cybersecurity foundat
 - Written explanations in my own words
 - No shortcuts
 
+## How I work
+- Daily focused study
+- Hands-on labs
+- Notes written in my own words
+- GitHub used as a learning log
+
 ## Goal
-Build real foundational competence in IT and cybersecurity before moving to specialization.
+Build strong IT and cybersecurity fundamentals before moving into specialization.
