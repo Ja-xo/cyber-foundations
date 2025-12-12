@@ -15,11 +15,7 @@ I am building real, practical cybersecurity competence through daily study, labs
 - Written explanations in my own words
 - No shortcuts
 
-## How I work
-- Daily focused study
-- Hands-on labs
-- Notes written in my own words
-- GitHub used as a learning log
+
 
 ## Goal
 Build strong IT and cybersecurity fundamentals before moving into specialization.
