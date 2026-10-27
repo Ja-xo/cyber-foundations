@@ -1,0 +1,27 @@
+[
+  {
+    "name": "EXAMPLE (not real data): mass dragons on the ring-core archetype",
+    "base": "bases/archetype-ring-core.json",
+    "army": {
+      "troops": { "dragon": 10 },
+      "spells": { "lightning-spell": 4, "rage-spell": 1, "earthquake-spell": 1 },
+      "cc": { "troops": { "dragon": 1, "balloon": 1 }, "spells": { "lightning-spell": 1 } },
+      "heroes": [{ "id": "archer-queen", "equipment": ["invisibility-vial", "frozen-arrow"] }]
+    },
+    "events": [
+      { "t": 0, "kind": "spell", "type": "earthquake-spell", "x": 29, "y": 25 },
+      { "t": 0.5, "kind": "spell", "type": "lightning-spell", "x": 29, "y": 25 },
+      { "t": 0.8, "kind": "spell", "type": "lightning-spell", "x": 29, "y": 25 },
+      { "t": 1.1, "kind": "spell", "type": "lightning-spell", "x": 29, "y": 25 },
+      { "t": 1.4, "kind": "spell", "type": "lightning-spell", "x": 29, "y": 25 },
+      { "t": 3, "kind": "troop", "type": "dragon", "x": 45, "y": 14, "count": 2, "spread": 20 },
+      { "t": 5, "kind": "troop", "type": "dragon", "x": 45, "y": 22, "count": 8, "spread": 12 },
+      { "t": 7, "kind": "cc", "x": 45, "y": 22 },
+      { "t": 8, "kind": "hero", "type": "archer-queen", "x": 45, "y": 22 },
+      { "t": 25, "kind": "spell", "type": "rage-spell", "x": 33, "y": 22 },
+      { "t": 40, "kind": "ability" }
+    ],
+    "actual": { "stars": 3, "pct": 100, "time": 150 },
+    "notes": "Template only. Replace with real attacks; delete this entry."
+  }
+]

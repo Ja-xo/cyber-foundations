@@ -11,10 +11,12 @@ const bases: Record<string, unknown> = {};
 const bdir = join(root, 'bases');
 if (existsSync(bdir)) for (const f of readdirSync(bdir).filter((f) => f.endsWith('.json'))) bases[f.slice(0, -5)] = JSON.parse(readFileSync(join(bdir, f), 'utf8'));
 
+const stylesFile = join(root, 'out', 'styles.json');
+const styles = existsSync(stylesFile) ? JSON.parse(readFileSync(stylesFile, 'utf8')) : [];
 const out = await build({
   entryPoints: [join(root, 'web', 'app.ts')],
   bundle: true, format: 'esm', minify: true, write: false, target: 'es2022',
-  define: { BAKED_BASES: JSON.stringify(bases) },
+  define: { BAKED_BASES: JSON.stringify(bases), BAKED_STYLES: JSON.stringify(styles) },
 });
 const js = out.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');
 const html = readFileSync(join(root, 'web', 'index.html'), 'utf8').replace('/*APP*/', () => js);

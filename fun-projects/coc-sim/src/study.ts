@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { decode, archetype, ARCHETYPES, type Genome } from './bases/generator.ts';
 import type { Layout } from './bases/layout.ts';
 import { STRATEGIES, strategyById } from './strategies/meta.ts';
+import { DEFAULT_PARAMS, HERO_EQUIPMENT } from './strategies/common.ts';
 import { Pool } from './optimize/pool.ts';
 import { Rng } from './engine/rng.ts';
 import { optimizeAttack, optimizeBase, evalStyle, attackPressure, describeStyle, type Style } from './optimize/search.ts';
@@ -35,27 +36,29 @@ export async function study(o: StudyOptions) {
   let styles: Style[] = [];
   const log = (s: string) => console.log(`[${((Date.now() - t0) / 60000).toFixed(1)}m] ${s}`);
 
+  // Start from the meta plans as written (Queen for air armies, King for ground).
+  styles = STRATEGIES.map((s) => {
+    const hero = s.kind === 'air' ? 'archer-queen' : 'barbarian-king';
+    return { strategy: s.id, params: { ...DEFAULT_PARAMS, hero, equipment: HERO_EQUIPMENT[hero] } };
+  });
   for (let round = 1; round <= o.rounds; round++) {
-    log(`ROUND ${round}: tuning ${STRATEGIES.length} attacks vs ${bases.length} bases`);
-    styles = [];
-    for (const s of STRATEGIES) {
-      const res = await optimizeAttack(pool, bases, s.id, o.iters, ev, rng, (m) => log(m));
-      styles.push(res.style);
-    }
-    writeFileSync(join(root, 'out', 'styles.json'), JSON.stringify(styles, null, 1));
-    log(`ROUND ${round}: evolving a base vs the tuned attacks`);
+    // Defense first: the archetypes fall to every meta attack, so evolve a base that doesn't.
+    log(`ROUND ${round}: evolving a base vs ${styles.length} attacks`);
     const res = await optimizeBase(pool, styles, { pop: o.pop, gens: o.gens, seed: 100 + round, eval: { angles: Math.min(6, o.angles), seeds: 1 }, seedGenomes: evolved.map((e) => e.genome) }, (m) => log(m));
     res.layout.name = `Evolved base (round ${round})`;
     evolved.push({ layout: res.layout, genome: res.genome, value: res.value, round });
     bases.push(res.layout);
     writeFileSync(join(root, 'out', `evolved-${round}.json`), JSON.stringify({ genome: res.genome, value: res.value, history: res.history }));
+    // Then the attackers adapt to the stronger bases.
+    const tuneOn = bases.filter((b) => !b.name.startsWith('Archetype')).concat(bases.filter((b) => b.name.startsWith('Archetype')).slice(0, 1));
+    log(`ROUND ${round}: tuning ${STRATEGIES.length} attacks vs ${tuneOn.length} bases`);
+    styles = [];
+    for (const s of STRATEGIES) {
+      const r = await optimizeAttack(pool, tuneOn, s.id, o.iters, ev, rng, (m) => log(m));
+      styles.push(r.style);
+    }
+    writeFileSync(join(root, 'out', 'styles.json'), JSON.stringify(styles, null, 1));
   }
-
-  // Final re-tune of attacks against the full pool, then a high-sample evaluation.
-  log('FINAL: re-tuning attacks vs full base pool');
-  styles = [];
-  for (const s of STRATEGIES) styles.push((await optimizeAttack(pool, bases, s.id, Math.ceil(o.iters / 2), ev, rng, (m) => log(m))).style);
-  writeFileSync(join(root, 'out', 'styles.json'), JSON.stringify(styles, null, 1));
 
   log('FINAL: evaluation matrix');
   const fe = { angles: o.angles, seeds: o.finalSeeds };

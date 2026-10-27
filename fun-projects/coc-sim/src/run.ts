@@ -40,6 +40,8 @@ export function summarize(results: { stars: number; pct: number; time: number }[
  * War value of one attack from the attacker's side. Stars dominate; a 3-star gets a
  * bonus because in war it fully clears the base; destruction % breaks ties.
  */
-export function warScore(r: { stars: number; pct: number }): number {
-  return r.stars + (r.stars === 3 ? 0.5 : 0) + r.pct / 200;
+export function warScore(r: { stars: number; pct: number; time?: number }): number {
+  // Time left only breaks ties between 3-star attacks (faster = more margin for error).
+  const spare = r.stars === 3 && r.time !== undefined ? Math.max(0, 180 - r.time) / 1800 : 0;
+  return r.stars + (r.stars === 3 ? 0.5 : 0) + r.pct / 200 + spare;
 }

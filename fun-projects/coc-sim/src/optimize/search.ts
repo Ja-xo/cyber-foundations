@@ -55,13 +55,17 @@ export async function evalStyleOnBase(pool: Pool, layout: Layout, s: Style, o: E
   const res = await pool.runAll(jobs);
   const errs = res.filter((r) => r.error);
   if (errs.length) throw new Error(errs[0].error);
-  let best = -1, bestAngle = 0, bestRes: JobResult[] = [];
+  // The attacker scouts and picks a side, but scouting is imperfect: score = mean of the
+  // top quarter of directions (not just the single luckiest one). Results = those runs.
+  const perAngle = [];
   for (let a = 0; a < o.angles; a++) {
     const rs = res.slice(a * o.seeds, (a + 1) * o.seeds);
-    const v = rs.reduce((x, r) => x + warScore(r), 0) / rs.length;
-    if (v > best) { best = v; bestAngle = (s.params.angle ?? 0) + a / o.angles; bestRes = rs; }
+    perAngle.push({ v: rs.reduce((x, r) => x + warScore(r), 0) / rs.length, angle: (s.params.angle ?? 0) + a / o.angles, rs });
   }
-  return { best, bestAngle, results: bestRes };
+  perAngle.sort((x, y) => y.v - x.v);
+  const k = Math.max(1, Math.ceil(o.angles / 4));
+  const top = perAngle.slice(0, k);
+  return { best: top.reduce((x, p) => x + p.v, 0) / k, bestAngle: top[0].angle, results: top.flatMap((p) => p.rs) };
 }
 
 export async function evalStyle(pool: Pool, bases: Layout[], s: Style, o: EvalOptions) {

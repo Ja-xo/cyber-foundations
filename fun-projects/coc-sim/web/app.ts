@@ -9,6 +9,8 @@ import { runAttack } from '../src/run.ts';
 import type { SimResult, Frame } from '../src/engine/sim.ts';
 
 declare const BAKED_BASES: Record<string, Layout> | undefined;
+declare const BAKED_STYLES: { strategy: string; params: Record<string, any> }[] | undefined;
+const tunedStyle = (id: string) => (typeof BAKED_STYLES !== 'undefined' ? BAKED_STYLES.find((s) => s.strategy === id) : undefined);
 
 const TILE = 14;
 const B = MAP.border;
@@ -132,13 +134,29 @@ function tickPlayback() {
 
 function currentParams() {
   const hero = ($('hero') as HTMLSelectElement).value as 'barbarian-king' | 'archer-queen';
+  const tuned = ($('tuned') as HTMLInputElement).checked ? tunedStyle(($('strategy') as HTMLSelectElement).value) : undefined;
+  const tp = tuned?.params ?? {};
   return {
+    timing: 1,
+    ...tp,
     angle: Number(($('angle') as HTMLInputElement).value) / 360,
     spread: Number(($('spread') as HTMLInputElement).value),
-    timing: 1,
-    hero, equipment: HERO_EQUIPMENT[hero],
+    hero, equipment: tp.hero === hero && tp.equipment ? tp.equipment : HERO_EQUIPMENT[hero],
     jitter: Number(($('jitter') as HTMLInputElement).value),
   };
+}
+
+/** When a tuned setup exists for the chosen strategy, show its hero and spread in the controls. */
+function syncTuned() {
+  const t = ($('tuned') as HTMLInputElement).checked ? tunedStyle(($('strategy') as HTMLSelectElement).value) : undefined;
+  const note = $('tunedNote');
+  if (!t) { note.textContent = typeof BAKED_STYLES !== 'undefined' && BAKED_STYLES.length ? 'Using the plan as written.' : 'No tuned setups baked in yet.'; return; }
+  const p = t.params;
+  ($('hero') as HTMLSelectElement).value = p.hero ?? 'barbarian-king';
+  const sp = $('spread') as HTMLInputElement;
+  sp.value = String(Math.round((p.spread ?? 1) * 10) / 10); sp.dispatchEvent(new Event('input'));
+  const swaps = (p.extra?.swaps ?? []).map((s: [string, string, number]) => `${s[2]} space ${s[0]} → ${s[1]}`).join(', ');
+  note.textContent = `Tuned: ${(p.equipment ?? []).join(' + ')}${swaps ? ' · swaps: ' + swaps : ''}${p.extra?.zap ? ' · zap ' + p.extra.zap + ' AD' : ''} · timing ×${(p.timing ?? 1).toFixed(2)}`;
 }
 
 function runOne() {
@@ -251,10 +269,14 @@ function loadBase(id: string) {
 function init() {
   const strat = $('strategy') as HTMLSelectElement;
   for (const s of STRATEGIES) strat.add(new Option(s.name, s.id));
+  strat.onchange = syncTuned;
+  ($('tuned') as HTMLInputElement).onchange = syncTuned;
   const baseSel = $('base') as HTMLSelectElement;
+  const baked = typeof BAKED_BASES !== 'undefined' ? Object.keys(BAKED_BASES).filter((k) => !k.startsWith('archetype-')).sort() : [];
+  for (const k of baked) baseSel.add(new Option(BAKED_BASES![k].name, k));
   for (const a of ARCHETYPES) baseSel.add(new Option(`Archetype: ${a}`, 'arch:' + a));
-  if (typeof BAKED_BASES !== 'undefined') for (const k of Object.keys(BAKED_BASES)) baseSel.add(new Option(BAKED_BASES[k].name, k));
   baseSel.onchange = () => loadBase(baseSel.value);
+  if (baked.length) { layout = JSON.parse(JSON.stringify(BAKED_BASES![baked[0]])); }
   $('run').onclick = runOne;
   $('runMany').onclick = runMany;
   $('play').onclick = () => { if (result) { mode = 'replay'; playing = !playing; updateModeButtons(); } };
@@ -280,6 +302,7 @@ function init() {
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
   buildPalette();
   updateModeButtons();
+  syncTuned();
   render();
   tickPlayback();
 }

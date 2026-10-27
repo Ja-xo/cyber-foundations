@@ -41,6 +41,8 @@ h2 { font-family: var(--display); font-weight: 400; font-size: 17px; letter-spac
 label { display: grid; grid-template-columns: 90px minmax(0, 1fr) 48px; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
 label.full { grid-template-columns: 90px minmax(0, 1fr); }
 select, input[type=number], textarea { font: inherit; font-size: 14px; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 5px; padding: 5px 7px; min-width: 0; width: 100%; }
+.check { display: flex; gap: 6px; align-items: center; color: var(--ink); }
+.check input { accent-color: var(--accent); }
 output { font-family: var(--mono); font-size: 12px; text-align: right; color: var(--ink); }
 button { font: inherit; font-weight: 600; font-size: 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 6px 12px; cursor: pointer; }
 button:hover { border-color: var(--accent); }
@@ -84,6 +86,8 @@ textarea { font-family: var(--mono); font-size: 11px; height: 70px; resize: vert
       <h2>Attack</h2>
       <label class="full">Base<select id="base"></select></label>
       <label class="full">Strategy<select id="strategy"></select></label>
+      <label class="full"><span>Setup</span><span class="check"><input id="tuned" type="checkbox" checked> use the optimizer's tuned setup</span></label>
+      <div id="tunedNote" class="muted"></div>
       <label class="full">Hero<select id="hero"><option value="barbarian-king">Barbarian King (Spiky Ball + Giant Gauntlet)</option><option value="archer-queen">Archer Queen (Invisibility + Frozen Arrow)</option></select></label>
       <label>Direction<input id="angle" type="range" min="0" max="359" value="0"><output id="angleVal"></output></label>
       <label>Spread<input id="spread" type="range" min="0.5" max="1.8" step="0.1" value="1"><output id="spreadVal"></output></label>
