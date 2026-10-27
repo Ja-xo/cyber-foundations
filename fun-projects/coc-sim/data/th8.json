@@ -1,0 +1,1738 @@
+{
+ "meta": {
+  "source": "clash-of-clans-data (npm, MIT) — community-maintained game data",
+  "sourceVersion": "0.19.0",
+  "generatedAt": "2026-10-27",
+  "townHall": 8,
+  "laboratory": 6,
+  "heroHall": 2,
+  "blacksmith": 1,
+  "spellFactory": 3,
+  "darkSpellFactory": 2,
+  "ccLabCap": 8
+ },
+ "capacities": {
+  "army": 200,
+  "spells": 6,
+  "darkSpells": 1,
+  "ccTroops": 25,
+  "ccSpells": 1,
+  "heroSlots": 1
+ },
+ "buildings": {
+  "cannon": {
+   "id": "cannon",
+   "name": "Cannon",
+   "kind": "defense",
+   "count": 5,
+   "level": 10,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 960,
+   "attack": {
+    "targetType": "ground",
+    "range": 9,
+    "attackSpeed": 0.8,
+    "damageType": "single",
+    "splashRadius": 0,
+    "dps": 64,
+    "damagePerShot": 51.2
+   }
+  },
+  "archer-tower": {
+   "id": "archer-tower",
+   "name": "Archer Tower",
+   "kind": "defense",
+   "count": 5,
+   "level": 10,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 810,
+   "attack": {
+    "targetType": "both",
+    "range": 10,
+    "attackSpeed": 0.5,
+    "damageType": "single",
+    "splashRadius": 0,
+    "dps": 63,
+    "damagePerShot": 31.5
+   }
+  },
+  "mortar": {
+   "id": "mortar",
+   "name": "Mortar",
+   "kind": "defense",
+   "count": 4,
+   "level": 6,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 650,
+   "attack": {
+    "targetType": "ground",
+    "range": 11,
+    "attackSpeed": 5,
+    "damageType": "splash",
+    "splashRadius": 1.5,
+    "dps": 11,
+    "damagePerShot": 55
+   }
+  },
+  "wizard-tower": {
+   "id": "wizard-tower",
+   "name": "Wizard Tower",
+   "kind": "defense",
+   "count": 3,
+   "level": 6,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 960,
+   "attack": {
+    "targetType": "both",
+    "range": 7,
+    "attackSpeed": 1.3,
+    "damageType": "splash",
+    "splashRadius": 1,
+    "dps": 32,
+    "damagePerShot": 41.6
+   }
+  },
+  "air-defense": {
+   "id": "air-defense",
+   "name": "Air Defense",
+   "kind": "defense",
+   "count": 3,
+   "level": 6,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 1050,
+   "attack": {
+    "targetType": "air",
+    "range": 10,
+    "attackSpeed": 1,
+    "damageType": "single",
+    "splashRadius": 0,
+    "dps": 230,
+    "damagePerShot": 230
+   }
+  },
+  "hidden-tesla": {
+   "id": "hidden-tesla",
+   "name": "Hidden Tesla",
+   "kind": "defense",
+   "count": 3,
+   "level": 6,
+   "size": [
+    2,
+    2
+   ],
+   "hp": 770,
+   "attack": {
+    "targetType": "both",
+    "range": 7,
+    "attackSpeed": 0.6,
+    "damageType": "single",
+    "splashRadius": 0,
+    "dps": 75,
+    "damagePerShot": 45,
+    "triggerRange": 6
+   }
+  },
+  "bomb-tower": {
+   "id": "bomb-tower",
+   "name": "Bomb Tower",
+   "kind": "defense",
+   "count": 1,
+   "level": 2,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 700,
+   "attack": {
+    "targetType": "ground",
+    "range": 6,
+    "attackSpeed": 1.1,
+    "damageType": "splash",
+    "splashRadius": 1.5,
+    "dps": 28,
+    "damagePerShot": 30.8
+   },
+   "deathDamage": 180
+  },
+  "air-sweeper": {
+   "id": "air-sweeper",
+   "name": "Air Sweeper",
+   "kind": "defense",
+   "count": 1,
+   "level": 4,
+   "size": [
+    2,
+    2
+   ],
+   "hp": 900,
+   "attack": {
+    "targetType": "air",
+    "range": 15,
+    "attackSpeed": 5,
+    "damageType": "none",
+    "splashRadius": 0,
+    "dps": 0,
+    "damagePerShot": 0,
+    "pushStrength": 2.8
+   }
+  },
+  "builders-hut": {
+   "id": "builders-hut",
+   "name": "Builder's Hut",
+   "kind": "other",
+   "count": 5,
+   "level": 1,
+   "size": [
+    2,
+    2
+   ],
+   "hp": 250
+  },
+  "gold-mine": {
+   "id": "gold-mine",
+   "name": "Gold Mine",
+   "kind": "resource",
+   "count": 6,
+   "level": 12,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 960
+  },
+  "elixir-collector": {
+   "id": "elixir-collector",
+   "name": "Elixir Collector",
+   "kind": "resource",
+   "count": 6,
+   "level": 12,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 960
+  },
+  "gold-storage": {
+   "id": "gold-storage",
+   "name": "Gold Storage",
+   "kind": "resource",
+   "count": 3,
+   "level": 11,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 2100
+  },
+  "elixir-storage": {
+   "id": "elixir-storage",
+   "name": "Elixir Storage",
+   "kind": "resource",
+   "count": 3,
+   "level": 11,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 2100
+  },
+  "dark-elixir-storage": {
+   "id": "dark-elixir-storage",
+   "name": "Dark Elixir Storage",
+   "kind": "resource",
+   "count": 1,
+   "level": 4,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 2600
+  },
+  "dark-elixir-drill": {
+   "id": "dark-elixir-drill",
+   "name": "Dark Elixir Drill",
+   "kind": "resource",
+   "count": 2,
+   "level": 3,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 920
+  },
+  "clan-castle": {
+   "id": "clan-castle",
+   "name": "Clan Castle",
+   "kind": "clancastle",
+   "count": 1,
+   "level": 4,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 2600,
+   "troopCapacity": 25,
+   "spellCapacity": 1,
+   "labLevelCap": 8,
+   "triggerRadius": 13
+  },
+  "army-camp": {
+   "id": "army-camp",
+   "name": "Army Camp",
+   "kind": "army",
+   "count": 4,
+   "level": 6,
+   "size": [
+    4,
+    4
+   ],
+   "hp": 330
+  },
+  "barracks": {
+   "id": "barracks",
+   "name": "Barracks",
+   "kind": "army",
+   "count": 1,
+   "level": 10,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 730
+  },
+  "dark-barracks": {
+   "id": "dark-barracks",
+   "name": "Dark Barracks",
+   "kind": "army",
+   "count": 1,
+   "level": 4,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 650
+  },
+  "laboratory": {
+   "id": "laboratory",
+   "name": "Laboratory",
+   "kind": "army",
+   "count": 1,
+   "level": 6,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 750
+  },
+  "spell-factory": {
+   "id": "spell-factory",
+   "name": "Spell Factory",
+   "kind": "army",
+   "count": 1,
+   "level": 3,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 520
+  },
+  "dark-spell-factory": {
+   "id": "dark-spell-factory",
+   "name": "Dark Spell Factory",
+   "kind": "army",
+   "count": 1,
+   "level": 2,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 660
+  },
+  "hero-hall": {
+   "id": "hero-hall",
+   "name": "Hero Hall",
+   "kind": "army",
+   "count": 1,
+   "level": 2,
+   "size": [
+    4,
+    4
+   ],
+   "hp": 2400
+  },
+  "blacksmith": {
+   "id": "blacksmith",
+   "name": "Blacksmith",
+   "kind": "army",
+   "count": 1,
+   "level": 1,
+   "size": [
+    3,
+    3
+   ],
+   "hp": 700
+  },
+  "town-hall": {
+   "id": "town-hall",
+   "name": "Town Hall",
+   "kind": "townhall",
+   "count": 1,
+   "level": 8,
+   "size": [
+    4,
+    4
+   ],
+   "hp": 3900,
+   "weapon": null,
+   "maxBuildings": 64,
+   "maxTraps": 23
+  }
+ },
+ "wall": {
+  "id": "wall",
+  "count": 225,
+  "level": 8,
+  "hp": 3000
+ },
+ "traps": {
+  "air-bomb": {
+   "id": "air-bomb",
+   "name": "Air Bomb",
+   "count": 4,
+   "level": 3,
+   "size": [
+    1,
+    1
+   ],
+   "triggerRadius": 4,
+   "damageRadius": 3,
+   "damageType": "splash",
+   "targetType": "air",
+   "damage": 144
+  },
+  "bomb": {
+   "id": "bomb",
+   "name": "Bomb",
+   "count": 6,
+   "level": 5,
+   "size": [
+    1,
+    1
+   ],
+   "triggerRadius": 1.5,
+   "damageRadius": 3,
+   "damageType": "splash",
+   "targetType": "ground",
+   "damage": 42
+  },
+  "giant-bomb": {
+   "id": "giant-bomb",
+   "name": "Giant Bomb",
+   "count": 3,
+   "level": 3,
+   "size": [
+    2,
+    2
+   ],
+   "triggerRadius": 2,
+   "damageRadius": 3.5,
+   "damageType": "splash",
+   "targetType": "ground",
+   "damage": 225
+  },
+  "seeking-air-mine": {
+   "id": "seeking-air-mine",
+   "name": "Seeking Air Mine",
+   "count": 2,
+   "level": 1,
+   "size": [
+    1,
+    1
+   ],
+   "triggerRadius": 4,
+   "damageRadius": 0,
+   "damageType": "single",
+   "targetType": "air",
+   "damage": 1500
+  },
+  "skeleton-trap": {
+   "id": "skeleton-trap",
+   "name": "Skeleton Trap",
+   "count": 2,
+   "level": 2,
+   "size": [
+    1,
+    1
+   ],
+   "triggerRadius": 5,
+   "damageRadius": 0,
+   "damageType": "single",
+   "targetType": "both",
+   "damage": 0,
+   "spawnedUnits": 3,
+   "skeletonLevel": 1
+  },
+  "spring-trap": {
+   "id": "spring-trap",
+   "name": "Spring Trap",
+   "count": 6,
+   "level": 3,
+   "size": [
+    1,
+    1
+   ],
+   "triggerRadius": 1,
+   "damageRadius": 0,
+   "damageType": "single",
+   "targetType": "ground",
+   "damage": 300,
+   "springCapacity": 14
+  }
+ },
+ "troops": {
+  "archer": {
+   "id": "archer",
+   "name": "Archer",
+   "level": 5,
+   "hp": 40,
+   "housing": 1,
+   "speed": 24,
+   "range": 3.5,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 20,
+   "damagePerShot": 20
+  },
+  "balloon": {
+   "id": "balloon",
+   "name": "Balloon",
+   "level": 5,
+   "hp": 390,
+   "housing": 5,
+   "speed": 10,
+   "range": 0.5,
+   "attackSpeed": 3,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 108,
+   "damagePerShot": 324,
+   "deathDamage": 108
+  },
+  "barbarian": {
+   "id": "barbarian",
+   "name": "Barbarian",
+   "level": 5,
+   "hp": 105,
+   "housing": 1,
+   "speed": 18,
+   "range": 0.4,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 23,
+   "damagePerShot": 23
+  },
+  "dragon": {
+   "id": "dragon",
+   "name": "Dragon",
+   "level": 3,
+   "hp": 2300,
+   "housing": 20,
+   "speed": 16,
+   "range": 3,
+   "attackSpeed": 1.25,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 180,
+   "damagePerShot": 225
+  },
+  "giant": {
+   "id": "giant",
+   "name": "Giant",
+   "level": 5,
+   "hp": 900,
+   "housing": 5,
+   "speed": 12,
+   "range": 1,
+   "attackSpeed": 2,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 31,
+   "damagePerShot": 62
+  },
+  "goblin": {
+   "id": "goblin",
+   "name": "Goblin",
+   "level": 5,
+   "hp": 65,
+   "housing": 1,
+   "speed": 32,
+   "range": 0.4,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 32,
+   "damagePerShot": 32
+  },
+  "golem": {
+   "id": "golem",
+   "name": "Golem",
+   "level": 2,
+   "hp": 5400,
+   "housing": 30,
+   "speed": 12,
+   "range": 1,
+   "attackSpeed": 2.4,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 40,
+   "damagePerShot": 96,
+   "deathDamage": 400,
+   "golemitesSpawned": 2
+  },
+  "healer": {
+   "id": "healer",
+   "name": "Healer",
+   "level": 3,
+   "hp": 900,
+   "housing": 14,
+   "speed": 16,
+   "range": 5,
+   "attackSpeed": 0.7,
+   "damageType": "none",
+   "targetType": "ground",
+   "dps": 0,
+   "damagePerShot": 0,
+   "healingPerSecond": 60,
+   "healingPerSecondOnHeroes": 33
+  },
+  "hog-rider": {
+   "id": "hog-rider",
+   "name": "Hog Rider",
+   "level": 4,
+   "hp": 430,
+   "housing": 5,
+   "speed": 24,
+   "range": 0.6,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 92,
+   "damagePerShot": 92
+  },
+  "minion": {
+   "id": "minion",
+   "name": "Minion",
+   "level": 4,
+   "hp": 73,
+   "housing": 2,
+   "speed": 32,
+   "range": 2.75,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 47,
+   "damagePerShot": 47
+  },
+  "pekka": {
+   "id": "pekka",
+   "name": "P.E.K.K.A",
+   "level": 3,
+   "hp": 4000,
+   "housing": 25,
+   "speed": 16,
+   "range": 0.8,
+   "attackSpeed": 1.8,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 320,
+   "damagePerShot": 576
+  },
+  "valkyrie": {
+   "id": "valkyrie",
+   "name": "Valkyrie",
+   "level": 2,
+   "hp": 850,
+   "housing": 8,
+   "speed": 24,
+   "range": 0.5,
+   "attackSpeed": 1.8,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 106,
+   "damagePerShot": 190.8
+  },
+  "wall-breaker": {
+   "id": "wall-breaker",
+   "name": "Wall Breaker",
+   "level": 5,
+   "hp": 53,
+   "housing": 2,
+   "speed": 24,
+   "range": 1,
+   "attackSpeed": 1,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 43,
+   "damagePerShot": 43,
+   "deathDamage": 23
+  },
+  "wizard": {
+   "id": "wizard",
+   "name": "Wizard",
+   "level": 5,
+   "hp": 165,
+   "housing": 4,
+   "speed": 16,
+   "range": 3,
+   "attackSpeed": 1.5,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 170,
+   "damagePerShot": 255
+  }
+ },
+ "ccTroops": {
+  "apprentice-warden": {
+   "id": "apprentice-warden",
+   "name": "Apprentice Warden",
+   "level": 1,
+   "hp": 1500,
+   "housing": 20,
+   "speed": 20,
+   "range": 5,
+   "attackSpeed": 0.9,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 170,
+   "damagePerShot": 153
+  },
+  "archer": {
+   "id": "archer",
+   "name": "Archer",
+   "level": 7,
+   "hp": 48,
+   "housing": 1,
+   "speed": 24,
+   "range": 3.5,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 25,
+   "damagePerShot": 25
+  },
+  "baby-dragon": {
+   "id": "baby-dragon",
+   "name": "Baby Dragon",
+   "level": 4,
+   "hp": 1500,
+   "housing": 10,
+   "speed": 20,
+   "range": 2.75,
+   "attackSpeed": 1,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 105,
+   "damagePerShot": 105
+  },
+  "balloon": {
+   "id": "balloon",
+   "name": "Balloon",
+   "level": 6,
+   "hp": 545,
+   "housing": 5,
+   "speed": 10,
+   "range": 0.5,
+   "attackSpeed": 3,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 162,
+   "damagePerShot": 486,
+   "deathDamage": 162
+  },
+  "barbarian": {
+   "id": "barbarian",
+   "name": "Barbarian",
+   "level": 7,
+   "hp": 160,
+   "housing": 1,
+   "speed": 18,
+   "range": 0.4,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 30,
+   "damagePerShot": 30
+  },
+  "bowler": {
+   "id": "bowler",
+   "name": "Bowler",
+   "level": 2,
+   "hp": 375,
+   "housing": 6,
+   "speed": 14,
+   "range": 3,
+   "attackSpeed": 2.2,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 72,
+   "damagePerShot": 158.4
+  },
+  "dragon-rider": {
+   "id": "dragon-rider",
+   "name": "Dragon Rider",
+   "level": 1,
+   "hp": 4100,
+   "housing": 25,
+   "speed": 20,
+   "range": 4,
+   "attackSpeed": 1.2,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 340,
+   "damagePerShot": 408,
+   "deathDamage": 700
+  },
+  "dragon": {
+   "id": "dragon",
+   "name": "Dragon",
+   "level": 5,
+   "hp": 3100,
+   "housing": 20,
+   "speed": 16,
+   "range": 3,
+   "attackSpeed": 1.25,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 240,
+   "damagePerShot": 300
+  },
+  "druid": {
+   "id": "druid",
+   "name": "Druid",
+   "level": 1,
+   "hp": 1300,
+   "housing": 16,
+   "speed": 24,
+   "range": 5,
+   "attackSpeed": 1,
+   "damageType": "chain",
+   "targetType": "both",
+   "dps": 0,
+   "damagePerShot": 0,
+   "healingPerSecond": 80,
+   "healingPerSecondOnHeroes": 84
+  },
+  "electro-dragon": {
+   "id": "electro-dragon",
+   "name": "Electro Dragon",
+   "level": 1,
+   "hp": 3400,
+   "housing": 30,
+   "speed": 13,
+   "range": 3,
+   "attackSpeed": 3.5,
+   "damageType": "chain",
+   "targetType": "both",
+   "dps": 260,
+   "damagePerShot": 910,
+   "deathDamage": 65
+  },
+  "electro-titan": {
+   "id": "electro-titan",
+   "name": "Electro Titan",
+   "level": 1,
+   "hp": 7200,
+   "housing": 32,
+   "speed": 16,
+   "range": 1.25,
+   "attackSpeed": 1.5,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 180,
+   "damagePerShot": 270
+  },
+  "furnace": {
+   "id": "furnace",
+   "name": "Furnace",
+   "level": 1,
+   "hp": 1530,
+   "housing": 18,
+   "speed": 0,
+   "damageType": "none",
+   "targetType": "ground",
+   "dps": 0,
+   "damagePerShot": 0
+  },
+  "giant": {
+   "id": "giant",
+   "name": "Giant",
+   "level": 7,
+   "hp": 1300,
+   "housing": 5,
+   "speed": 12,
+   "range": 1,
+   "attackSpeed": 2,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 55,
+   "damagePerShot": 110
+  },
+  "goblin": {
+   "id": "goblin",
+   "name": "Goblin",
+   "level": 7,
+   "hp": 105,
+   "housing": 1,
+   "speed": 32,
+   "range": 0.4,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 52,
+   "damagePerShot": 52
+  },
+  "golem": {
+   "id": "golem",
+   "name": "Golem",
+   "level": 5,
+   "hp": 6300,
+   "housing": 30,
+   "speed": 12,
+   "range": 1,
+   "attackSpeed": 2.4,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 55,
+   "damagePerShot": 132,
+   "deathDamage": 550,
+   "golemitesSpawned": 2
+  },
+  "headhunter": {
+   "id": "headhunter",
+   "name": "Headhunter",
+   "level": 1,
+   "hp": 360,
+   "housing": 6,
+   "speed": 32,
+   "range": 3,
+   "attackSpeed": 0.6,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 105,
+   "damagePerShot": 63
+  },
+  "healer": {
+   "id": "healer",
+   "name": "Healer",
+   "level": 4,
+   "hp": 1200,
+   "housing": 14,
+   "speed": 16,
+   "range": 5,
+   "attackSpeed": 0.7,
+   "damageType": "none",
+   "targetType": "ground",
+   "dps": 0,
+   "damagePerShot": 0,
+   "healingPerSecond": 66,
+   "healingPerSecondOnHeroes": 36
+  },
+  "hog-rider": {
+   "id": "hog-rider",
+   "name": "Hog Rider",
+   "level": 6,
+   "hp": 590,
+   "housing": 5,
+   "speed": 24,
+   "range": 0.6,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 118,
+   "damagePerShot": 118
+  },
+  "ice-golem": {
+   "id": "ice-golem",
+   "name": "Ice Golem",
+   "level": 1,
+   "hp": 2600,
+   "housing": 15,
+   "speed": 12,
+   "range": 1,
+   "attackSpeed": 2,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 24,
+   "damagePerShot": 48
+  },
+  "lava-hound": {
+   "id": "lava-hound",
+   "name": "Lava Hound",
+   "level": 3,
+   "hp": 6800,
+   "housing": 30,
+   "speed": 20,
+   "range": 1,
+   "attackSpeed": 2,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 14,
+   "damagePerShot": 28,
+   "deathDamage": 200
+  },
+  "meteor-golem": {
+   "id": "meteor-golem",
+   "name": "Meteor Golem",
+   "level": 1,
+   "hp": 15300,
+   "housing": 40,
+   "speed": 12,
+   "range": 5,
+   "attackSpeed": 1,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 450,
+   "damagePerShot": 450
+  },
+  "miner": {
+   "id": "miner",
+   "name": "Miner",
+   "level": 3,
+   "hp": 670,
+   "housing": 6,
+   "speed": 32,
+   "range": 0.5,
+   "attackSpeed": 1.7,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 96,
+   "damagePerShot": 163.2
+  },
+  "minion": {
+   "id": "minion",
+   "name": "Minion",
+   "level": 6,
+   "hp": 84,
+   "housing": 2,
+   "speed": 32,
+   "range": 2.75,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 54,
+   "damagePerShot": 54
+  },
+  "pekka": {
+   "id": "pekka",
+   "name": "P.E.K.K.A",
+   "level": 6,
+   "hp": 5500,
+   "housing": 25,
+   "speed": 16,
+   "range": 0.8,
+   "attackSpeed": 1.8,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 470,
+   "damagePerShot": 846
+  },
+  "root-rider": {
+   "id": "root-rider",
+   "name": "Root Rider",
+   "level": 1,
+   "hp": 6200,
+   "housing": 20,
+   "speed": 12,
+   "range": 1,
+   "attackSpeed": 2.2,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 95,
+   "damagePerShot": 209
+  },
+  "thrower": {
+   "id": "thrower",
+   "name": "Thrower",
+   "level": 1,
+   "hp": 2200,
+   "housing": 16,
+   "speed": 16,
+   "range": 6,
+   "attackSpeed": 2.5,
+   "damageType": "single",
+   "targetType": "both",
+   "dps": 190,
+   "damagePerShot": 475
+  },
+  "valkyrie": {
+   "id": "valkyrie",
+   "name": "Valkyrie",
+   "level": 5,
+   "hp": 1300,
+   "housing": 8,
+   "speed": 24,
+   "range": 0.5,
+   "attackSpeed": 1.8,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 148,
+   "damagePerShot": 266.4
+  },
+  "wall-breaker": {
+   "id": "wall-breaker",
+   "name": "Wall Breaker",
+   "level": 6,
+   "hp": 72,
+   "housing": 2,
+   "speed": 24,
+   "range": 1,
+   "attackSpeed": 1,
+   "damageType": "splash",
+   "targetType": "ground",
+   "dps": 55,
+   "damagePerShot": 55,
+   "deathDamage": 30
+  },
+  "witch": {
+   "id": "witch",
+   "name": "Witch",
+   "level": 3,
+   "hp": 400,
+   "housing": 12,
+   "speed": 12,
+   "range": 4,
+   "attackSpeed": 0.7,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 140,
+   "damagePerShot": 98
+  },
+  "wizard": {
+   "id": "wizard",
+   "name": "Wizard",
+   "level": 7,
+   "hp": 195,
+   "housing": 4,
+   "speed": 16,
+   "range": 3,
+   "attackSpeed": 1.5,
+   "damageType": "splash",
+   "targetType": "both",
+   "dps": 200,
+   "damagePerShot": 300
+  },
+  "yeti": {
+   "id": "yeti",
+   "name": "Yeti",
+   "level": 1,
+   "hp": 2900,
+   "housing": 18,
+   "speed": 12,
+   "range": 0.8,
+   "attackSpeed": 1,
+   "damageType": "single",
+   "targetType": "ground",
+   "dps": 230,
+   "damagePerShot": 230
+  }
+ },
+ "spells": {
+  "earthquake-spell": {
+   "id": "earthquake-spell",
+   "name": "Earthquake Spell",
+   "spellType": "dark",
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 2,
+   "level": 2,
+   "buildingDamagePercent": 17,
+   "radius": 3.8,
+   "laboratoryRequired": 6,
+   "townHallRequired": 8
+  },
+  "healing-spell": {
+   "id": "healing-spell",
+   "name": "Healing Spell",
+   "spellType": "regular",
+   "radius": 5,
+   "housingSpace": 2,
+   "donationCost": {
+    "amount": 18000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 6
+   },
+   "spellFactoryLevelRequired": 2,
+   "numberOfPulses": 41,
+   "timeBetweenPulses": 0.3,
+   "level": 5,
+   "totalHealing": 1435,
+   "healingPerPulse": 35,
+   "totalHealingOnHeroes": 789.25,
+   "laboratoryRequired": 6,
+   "townHallRequired": 8
+  },
+  "lightning-spell": {
+   "id": "lightning-spell",
+   "name": "Lightning Spell",
+   "spellType": "regular",
+   "radius": 2,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 9000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 1,
+   "stunTime": 0.1,
+   "level": 5,
+   "damage": 270,
+   "laboratoryRequired": 6,
+   "townHallRequired": 8
+  },
+  "poison-spell": {
+   "id": "poison-spell",
+   "name": "Poison Spell",
+   "spellType": "dark",
+   "radius": 4,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 1,
+   "spellDuration": 16,
+   "targetType": "both",
+   "level": 2,
+   "maxDamagePerSecond": 115,
+   "speedDecrease": 30,
+   "attackRateDecrease": 40,
+   "laboratoryRequired": 6,
+   "townHallRequired": 8
+  },
+  "rage-spell": {
+   "id": "rage-spell",
+   "name": "Rage Spell",
+   "spellType": "regular",
+   "radius": 5,
+   "housingSpace": 2,
+   "donationCost": {
+    "amount": 18000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 6
+   },
+   "spellFactoryLevelRequired": 3,
+   "numberOfPulses": 60,
+   "timeBetweenPulses": 0.3,
+   "boostTime": 1,
+   "level": 5,
+   "damageIncrease": 170,
+   "speedIncrease": 28,
+   "laboratoryRequired": 6,
+   "townHallRequired": 8
+  }
+ },
+ "ccSpells": {
+  "angry-spell": {
+   "id": "angry-spell",
+   "name": "Angry Spell",
+   "spellType": "dark",
+   "radius": 6,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 190,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 8,
+   "targetType": "both",
+   "level": 1,
+   "angerDuration": 7,
+   "spellDuration": 5,
+   "movementSpeedIncrease": 35,
+   "laboratoryRequired": 0,
+   "townHallRequired": 15
+  },
+  "bat-spell": {
+   "id": "bat-spell",
+   "name": "Bat Spell",
+   "spellType": "dark",
+   "radius": 3.5,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 5,
+   "targetType": "defenses",
+   "batStats": {
+    "preferredTarget": "Defenses",
+    "attackType": "Air",
+    "movementSpeed": 56,
+    "attackSpeed": 2,
+    "range": 0.8,
+    "damagePerSecond": 30,
+    "damageVsResources": 0.4,
+    "hitpoints": 20
+   },
+   "level": 3,
+   "batsGenerated": 11,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "earthquake-spell": {
+   "id": "earthquake-spell",
+   "name": "Earthquake Spell",
+   "spellType": "dark",
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 2,
+   "level": 4,
+   "buildingDamagePercent": 25,
+   "radius": 4.4,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "freeze-spell": {
+   "id": "freeze-spell",
+   "name": "Freeze Spell",
+   "spellType": "regular",
+   "radius": 3.5,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 9000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 4,
+   "level": 5,
+   "spellDuration": 4.5,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "haste-spell": {
+   "id": "haste-spell",
+   "name": "Haste Spell",
+   "spellType": "dark",
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 3,
+   "targetType": "both",
+   "level": 4,
+   "speedIncrease": 46,
+   "spellDuration": 25,
+   "radius": 4,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "ice-block-spell": {
+   "id": "ice-block-spell",
+   "name": "Ice Block Spell",
+   "spellType": "dark",
+   "radius": 5,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 7,
+   "targetType": "both",
+   "level": 1,
+   "incomingDamageReduction": 86,
+   "spellDuration": 7,
+   "laboratoryRequired": 0,
+   "townHallRequired": 12
+  },
+  "invisibility-spell": {
+   "id": "invisibility-spell",
+   "name": "Invisibility Spell",
+   "spellType": "regular",
+   "radius": 4,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 9000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 6,
+   "level": 1,
+   "spellDuration": 3.5,
+   "laboratoryRequired": 0,
+   "townHallRequired": 10
+  },
+  "lightning-spell": {
+   "id": "lightning-spell",
+   "name": "Lightning Spell",
+   "spellType": "regular",
+   "radius": 2,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 9000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 1,
+   "stunTime": 0.1,
+   "level": 7,
+   "damage": 400,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "poison-spell": {
+   "id": "poison-spell",
+   "name": "Poison Spell",
+   "spellType": "dark",
+   "radius": 4,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 1,
+   "spellDuration": 16,
+   "targetType": "both",
+   "level": 4,
+   "maxDamagePerSecond": 180,
+   "speedDecrease": 38,
+   "attackRateDecrease": 50,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "skeleton-spell": {
+   "id": "skeleton-spell",
+   "name": "Skeleton Spell",
+   "spellType": "dark",
+   "radius": 3.5,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 135,
+    "resource": "Dark Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 4,
+   "targetType": "ground",
+   "skeletonStats": {
+    "preferredTarget": "None",
+    "attackType": "Melee (Ground Only)",
+    "movementSpeed": 24,
+    "attackSpeed": 1,
+    "range": 0.4,
+    "damagePerSecond": 25,
+    "hitpoints": 30,
+    "armorHitpoints": 30
+   },
+   "level": 3,
+   "skeletonsGenerated": 14,
+   "laboratoryRequired": 8,
+   "townHallRequired": 10
+  },
+  "totem-spell": {
+   "id": "totem-spell",
+   "name": "Totem Spell",
+   "spellType": "regular",
+   "radius": 5,
+   "housingSpace": 1,
+   "donationCost": {
+    "amount": 9000,
+    "resource": "Elixir",
+    "gemsOrRaidMedals": 3
+   },
+   "spellFactoryLevelRequired": 9,
+   "targetType": "both",
+   "hitpointDecayPerSecond": 334,
+   "level": 1,
+   "totemHitpoints": 10000,
+   "laboratoryRequired": 0,
+   "townHallRequired": 13
+  }
+ },
+ "heroes": {
+  "barbarian-king": {
+   "id": "barbarian-king",
+   "name": "Barbarian King",
+   "level": 20,
+   "hp": 2309,
+   "dps": 148,
+   "damagePerShot": 177.6,
+   "healthRecovery": 450,
+   "speed": 16,
+   "attackSpeed": 1.2,
+   "range": 1,
+   "searchRadius": 9,
+   "attackType": "Melee (Ground Only)"
+  },
+  "archer-queen": {
+   "id": "archer-queen",
+   "name": "Archer Queen",
+   "level": 10,
+   "hp": 699,
+   "dps": 169,
+   "damagePerShot": 126.75,
+   "healthRecovery": 145,
+   "speed": 24,
+   "attackSpeed": 0.75,
+   "range": 5,
+   "searchRadius": 10,
+   "attackType": "Ranged (Ground & Air)"
+  }
+ },
+ "equipment": {
+  "action-figure": {
+   "id": "action-figure",
+   "name": "Action Figure",
+   "hero": "archer-queen",
+   "rarity": "Epic",
+   "abilityType": "Active",
+   "level": 12,
+   "ability": {
+    "invisibilityDuration": "1s"
+   },
+   "hitpointIncrease": 380,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "giantGiantLevel": 5,
+    "selfHealingPerSecond": 28,
+    "dpsIncrease": 80
+   }
+  },
+  "archer-puppet": {
+   "id": "archer-puppet",
+   "name": "Archer Puppet",
+   "hero": "archer-queen",
+   "rarity": "Common",
+   "abilityType": "Active",
+   "level": 9,
+   "ability": {},
+   "hitpointIncrease": 0,
+   "hpRecoveryIncrease": 308,
+   "stats": {
+    "summonedArchers": 20,
+    "archerInvisibilityDuration": "5.0s",
+    "dpsIncrease": 99
+   }
+  },
+  "barbarian-puppet": {
+   "id": "barbarian-puppet",
+   "name": "Barbarian Puppet",
+   "hero": "barbarian-king",
+   "rarity": "Common",
+   "abilityType": "Active",
+   "level": 9,
+   "ability": {
+    "barbarianRageDuration": 20
+   },
+   "hitpointIncrease": 1045,
+   "hpRecoveryIncrease": 572,
+   "stats": {
+    "summonedBarbarians": 30,
+    "barbarianDamageIncrease": "+160%",
+    "barbarianSpeedIncrease": 19.1
+   }
+  },
+  "earthquake-boots": {
+   "id": "earthquake-boots",
+   "name": "Earthquake Boots",
+   "hero": "barbarian-king",
+   "rarity": "Common",
+   "abilityType": "Active",
+   "level": 9,
+   "ability": {
+    "abilityRadius": 8,
+    "targets": "Ground"
+   },
+   "hitpointIncrease": 522,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "buildingDamagePercent": "34%",
+    "troopDamagePercent": "17%",
+    "dpsIncrease": 32
+   }
+  },
+  "frozen-arrow": {
+   "id": "frozen-arrow",
+   "name": "Frozen Arrow",
+   "hero": "archer-queen",
+   "rarity": "Epic",
+   "abilityType": "Passive",
+   "level": 12,
+   "ability": {},
+   "hitpointIncrease": 0,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "slowDown": "45%",
+    "slowDownDuration": "1.75s",
+    "dpsIncrease": 99
+   }
+  },
+  "giant-gauntlet": {
+   "id": "giant-gauntlet",
+   "name": "Giant Gauntlet",
+   "hero": "barbarian-king",
+   "rarity": "Epic",
+   "abilityType": "Active",
+   "level": 12,
+   "ability": {
+    "areaDamageRadius": 2.5
+   },
+   "hitpointIncrease": 0,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "abilityDuration": "16s",
+    "incomingDamageReduction": "40%",
+    "dpsIncrease": 74,
+    "selfHealingPerSecond": 28
+   }
+  },
+  "invisibility-vial": {
+   "id": "invisibility-vial",
+   "name": "Invisibility Vial",
+   "hero": "archer-queen",
+   "rarity": "Common",
+   "abilityType": "Active",
+   "level": 9,
+   "ability": {},
+   "hitpointIncrease": 340,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "abilityDuration": "6.0s",
+    "damagePerShotIncrease": 1120
+   }
+  },
+  "magic-mirror": {
+   "id": "magic-mirror",
+   "name": "Magic Mirror",
+   "hero": "archer-queen",
+   "rarity": "Epic",
+   "abilityType": "Active",
+   "level": 12,
+   "ability": {
+    "invisibilityDuration": "1s"
+   },
+   "hitpointIncrease": 412,
+   "hpRecoveryIncrease": 474,
+   "stats": {
+    "clones": 1,
+    "cloneDuration": "25s",
+    "cloneDps": 416,
+    "cloneHealth": 1752
+   }
+  },
+  "monolith-arrow": {
+   "id": "monolith-arrow",
+   "name": "Monolith Arrow",
+   "hero": "archer-queen",
+   "rarity": "Epic",
+   "abilityType": "Passive",
+   "level": 12,
+   "ability": {},
+   "hitpointIncrease": 540,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "extraDamageBelow180": "11.5%",
+    "extraDamage181To250": "9%",
+    "extraDamage251Plus": "4.4%",
+    "incomingDamageReduction": "5%"
+   }
+  },
+  "rage-vial": {
+   "id": "rage-vial",
+   "name": "Rage Vial",
+   "hero": "barbarian-king",
+   "rarity": "Common",
+   "abilityType": "Active",
+   "level": 9,
+   "ability": {
+    "abilityDuration": 10
+   },
+   "hitpointIncrease": 0,
+   "hpRecoveryIncrease": 780,
+   "stats": {
+    "damageIncrease": "+140%",
+    "movementSpeedIncrease": 28.7,
+    "dpsIncrease": 60
+   }
+  },
+  "snake-bracelet": {
+   "id": "snake-bracelet",
+   "name": "Snake Bracelet",
+   "hero": "barbarian-king",
+   "rarity": "Epic",
+   "abilityType": "Passive",
+   "level": 12,
+   "ability": {},
+   "hitpointIncrease": 1800,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "maxSummonedSnakes": 24,
+    "snakeLevel": 5,
+    "dpsIncrease": 30,
+    "attackSpeedIncrease": "+5%"
+   }
+  },
+  "spiky-ball": {
+   "id": "spiky-ball",
+   "name": "Spiky Ball",
+   "hero": "barbarian-king",
+   "rarity": "Epic",
+   "abilityType": "Active",
+   "level": 12,
+   "ability": {},
+   "hitpointIncrease": 1603,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "projectileDamagePerTarget": 2000,
+    "numberOfTargets": 6,
+    "dpsIncrease": 101
+   }
+  },
+  "stick-horse": {
+   "id": "stick-horse",
+   "name": "Stick Horse",
+   "hero": "barbarian-king",
+   "rarity": "Epic",
+   "abilityType": "Passive",
+   "level": 12,
+   "ability": {},
+   "hitpointIncrease": 2191,
+   "hpRecoveryIncrease": 0,
+   "stats": {
+    "abilityDuration": "20s",
+    "movementSpeedIncrease": 16,
+    "attackSpeedIncrease": "+14%",
+    "dpsIncrease": 101
+   }
+  }
+ }
+}
