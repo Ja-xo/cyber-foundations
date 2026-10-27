@@ -1,0 +1,143 @@
+[
+ {
+  "strategy": "gowipe",
+  "params": {
+   "angle": 0,
+   "spread": 1.1145387353866298,
+   "timing": 1,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "magic-mirror",
+    "frozen-arrow"
+   ],
+   "extra": {
+    "swaps": [
+     [
+      "archer",
+      "wizard",
+      8
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "strategy": "goho",
+  "params": {
+   "angle": 0,
+   "spread": 1,
+   "timing": 1.001478211559593,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "archer-puppet",
+    "frozen-arrow"
+   ],
+   "extra": {}
+  }
+ },
+ {
+  "strategy": "govaho",
+  "params": {
+   "angle": 0,
+   "spread": 0.8462706983394951,
+   "timing": 0.9432444162021902,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "invisibility-vial",
+    "frozen-arrow"
+   ],
+   "extra": {}
+  }
+ },
+ {
+  "strategy": "mass-dragon",
+  "params": {
+   "angle": 0,
+   "spread": 0.9083539937777488,
+   "timing": 1,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "magic-mirror",
+    "frozen-arrow"
+   ],
+   "extra": {
+    "zap": "central"
+   }
+  }
+ },
+ {
+  "strategy": "dragloon",
+  "params": {
+   "angle": 0,
+   "spread": 1.3275399841555782,
+   "timing": 1,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "action-figure",
+    "frozen-arrow"
+   ],
+   "extra": {
+    "zap": "far"
+   }
+  }
+ },
+ {
+  "strategy": "mass-hog",
+  "params": {
+   "angle": 0,
+   "spread": 1,
+   "timing": 1,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "invisibility-vial",
+    "magic-mirror"
+   ],
+   "extra": {}
+  }
+ },
+ {
+  "strategy": "balloonion",
+  "params": {
+   "angle": 0,
+   "spread": 0.8817964795532982,
+   "timing": 0.7029867491456332,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "invisibility-vial",
+    "frozen-arrow"
+   ],
+   "extra": {
+    "swaps": [
+     [
+      "balloon",
+      "dragon",
+      20
+     ]
+    ],
+    "zap": "central"
+   }
+  }
+ },
+ {
+  "strategy": "giwi",
+  "params": {
+   "angle": 0,
+   "spread": 1.274772603732376,
+   "timing": 1,
+   "hero": "archer-queen",
+   "jitter": 0.6,
+   "equipment": [
+    "magic-mirror",
+    "frozen-arrow"
+   ],
+   "extra": {}
+  }
+ }
+]

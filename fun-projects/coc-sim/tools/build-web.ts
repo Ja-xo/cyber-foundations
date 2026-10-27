@@ -9,9 +9,9 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const bases: Record<string, unknown> = {};
 const bdir = join(root, 'bases');
-if (existsSync(bdir)) for (const f of readdirSync(bdir).filter((f) => f.endsWith('.json'))) bases[f.slice(0, -5)] = JSON.parse(readFileSync(join(bdir, f), 'utf8'));
+if (existsSync(bdir)) for (const f of readdirSync(bdir).filter((f) => f.endsWith('.json') && f !== 'tuned-styles.json')) bases[f.slice(0, -5)] = JSON.parse(readFileSync(join(bdir, f), 'utf8'));
 
-const stylesFile = join(root, 'out', 'styles.json');
+const stylesFile = existsSync(join(root, 'out', 'styles.json')) ? join(root, 'out', 'styles.json') : join(root, 'bases', 'tuned-styles.json');
 const styles = existsSync(stylesFile) ? JSON.parse(readFileSync(stylesFile, 'utf8')) : [];
 const out = await build({
   entryPoints: [join(root, 'web', 'app.ts')],
